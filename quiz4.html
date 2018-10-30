@@ -1,0 +1,133 @@
+<html>
+<body style = "background : url('img13.jpg') ">
+
+	 <h3 style="float: center ;"> Time Left = 
+    <span id="timer">
+      <script type="text/javascript">
+        var timeoutHandle;
+        function countdown(minutes)
+         {
+          var seconds = 60;
+          var mins = minutes;
+          function tick()
+           {
+             var counter = document.getElementById("timer");
+             var current_minutes = mins-1;
+             seconds--;
+             counter.innerHTML = current_minutes.toString() + ":" + (seconds<10 ? "0" : "") + String(seconds);
+
+             if (seconds>0)
+              {
+                timeoutHandle = setTimeout( tick , 1000);
+              }
+              else 
+              {
+                if (mins > 1) 
+                {
+                  setTimeout(function(){ countdown(mins-1);},1000);
+                }
+              }
+          }
+          tick();
+
+        }
+        setTimeout(function()
+        {
+          document.getElementById("begin").click()
+        },120000);
+        countdown(2);
+    
+      
+      </script>
+    </span>
+
+</h3>
+<audio autoplay="true" loop="true" volume="5">
+    <source src="song3.mp3" type="audio/mpeg">
+</audio>
+	  <form action = "quiz4.php" method="POST"> 
+	<b> <p> Q1 With which ancient indian dynasty does one associate economist and royal advisor Chanakya?</p></b>
+	 
+	 	<input type="radio" name="answer1" required value="a">Pandya<br>
+	 	<input type="radio" name="answer1" value="b">Chola<br>
+	 	<input type="radio" name="answer1" value="c">Maurya<br>
+	 	<input type="radio" name="answer1" value="d">Gupta<br>
+
+     <b><p> Q2 Purana qila in new delhi is believed to be the location of which ancient indian capital ?</p></b>
+	 
+	 	<input type="radio" name="answer2" required value="a">Indraprastha<br>
+	 	<input type="radio" name="answer2" value="b">Dwarka<br>
+	 	<input type="radio" name="answer2" value="c">Puhar<br>
+	 	<input type="radio" name="answer2" value="d">Ayodhya<br>
+
+	 <b><p> Q3 Which ancient kingdom coincides with the present territory of Orrisa state ?</p></b>
+	 
+	 	<input type="radio" name="answer3" required value="a">Vijayawada<br>
+	 	<input type="radio" name="answer3" value="b">Gandhara<br>
+	 	<input type="radio" name="answer3" value="c">Kalinga<br>
+	 	<input type="radio" name="answer3" value="d">Kosala<br>
+
+	  <b><p> Q4 Which among the following is the smallest district in india ?</p></b>
+	 
+	 	<input type="radio" name="answer4" required value="a">Banglore<br>
+	 	<input type="radio" name="answer4" value="b">Mahe<br>
+	 	<input type="radio" name="answer4" value="c">Kanyakumari<br>
+	 	<input type="radio" name="answer4" value="d">Purnea<br>	
+
+	<b> <p> Q5 What is the capital of Croatia ?</p></b>
+	 
+	 	<input type="radio" name="answer5" required value="a">Moscow<br>
+	 	<input type="radio" name="answer5" value="b">Vienna<br>
+	 	<input type="radio" name="answer5" value="c">Zagreb<br>
+	 	<input type="radio" name="answer5" value="d">Rome<br>
+	 	
+	 <b> <p> Q6 Genghis Khan was the ruler of which empire ? </p></b>
+	 
+	 	<input type="radio" name="answer6" required value="a">Chinese<br>
+	 	<input type="radio" name="answer6" value="b">Japanese<br>
+	 	<input type="radio" name="answer6" value="c">Mongol<br>
+	 	<input type="radio" name="answer6" value="d">Ottoman<br>
+
+	 <b> <p> Q7 " Music Row" is located in which city  ?</p></b>
+	 
+	 	<input type="radio" name="answer7" required value="a">Nashville<br>
+	 	<input type="radio" name="answer7" value="b">Los Angeles<br>
+	 	<input type="radio" name="answer7" value="c">Austin <br>
+	 	<input type="radio" name="answer7" value="d">Detroit<br>
+
+	 <b> <p> Q8 What is the name of the pro basketball franchise from Atlanta ?</p></b>
+	 
+	 	<input type="radio" name="answer8" required value="a">Hawks<br>
+	 	<input type="radio" name="answer8" value="b">Jazz<br>
+	 	<input type="radio" name="answer8" value="c">Bulls<br>
+	 	<input type="radio" name="answer8" value="d">Hornets<br>
+
+	 <b> <p> Q9 Which is the poorest nation in the western hemisphere according to the United Nation's human development index ? </p></b>
+	 
+	 	<input type="radio" name="answer9" required value="a">Guyana<br>
+	 	<input type="radio" name="answer9" value="b">Brazil<br>
+	 	<input type="radio" name="answer9" value="c">Haiti<br>
+	 	<input type="radio" name="answer9" value="d">Pureto Rico<br>
+
+	 <b> <p> Q10 What is the raw ingredient from which Cognac is distilled ?</p></b>
+	 
+	 	<input type="radio" name="answer10" required value="a">Corn<br>
+	 	<input type="radio" name="answer10" value="b">Cane Sugar<br>
+	 	<input type="radio" name="answer10" value="c">Barley <br>
+	 	<input type="radio" name="answer10" value="d">Wine Grapes<br>	
+
+<br>
+<br>
+<button id="begin" class = 'click'> submit  </button>
+	 </form>
+
+</body>
+</html>
+
+<style >
+ 
+p{
+  color: yellow ;
+}
+
+</style>

@@ -1,0 +1,133 @@
+<html>
+<body style = "background : url('img13.jpg') ">
+
+	 <h3 style="float: center ;"> Time Left = 
+    <span id="timer">
+      <script type="text/javascript">
+        var timeoutHandle;
+        function countdown(minutes)
+         {
+          var seconds = 60;
+          var mins = minutes;
+          function tick()
+           {
+             var counter = document.getElementById("timer");
+             var current_minutes = mins-1;
+             seconds--;
+             counter.innerHTML = current_minutes.toString() + ":" + (seconds<10 ? "0" : "") + String(seconds);
+
+             if (seconds>0)
+              {
+                timeoutHandle = setTimeout( tick , 1000);
+              }
+              else 
+              {
+                if (mins > 1) 
+                {
+                  setTimeout(function(){ countdown(mins-1);},1000);
+                }
+              }
+          }
+          tick();
+
+        }
+        setTimeout(function()
+        {
+          document.getElementById("begin").click()
+        },120000);
+        countdown(2);
+    
+      
+      </script>
+    </span>
+
+</h3>
+<audio autoplay="true" loop="true" volume="5">
+    <source src="song3.mp3" type="audio/mpeg">
+</audio>
+	  <form action = "quiz3.php" method="POST"> 
+	<b> <p> Q1 One of the vanishing cabinets that draco malfoy used was at hogwarts. where was the other one?</p></b>
+	 
+	 	<input type="radio" name="answer1" required value="a">The three broomsticks<br>
+	 	<input type="radio" name="answer1" value="b">The hogs head<br>
+	 	<input type="radio" name="answer1" value="c">The ministry of magic<br>
+	 	<input type="radio" name="answer1" value="d">Borgin and burkes<br>
+
+     <b><p> Q2 When trying to use floo powder,where does harry end up instead of Diagon alley ?</p></b>
+	 
+	 	<input type="radio" name="answer2" required value="a">Hogwarts<br>
+	 	<input type="radio" name="answer2" value="b">Knockturn alley<br>
+	 	<input type="radio" name="answer2" value="c">Ron's house<br>
+	 	<input type="radio" name="answer2" value="d">Platform 9 3/4<br>
+
+	 <b><p> Q3 Which of these was never a member of the order of phoenix?</p></b>
+	 
+	 	<input type="radio" name="answer3" required value="a">Narcissa Malfoy<br>
+	 	<input type="radio" name="answer3" value="b">Emmeline Vance<br>
+	 	<input type="radio" name="answer3" value="c">Rubeus Hagrid<br>
+	 	<input type="radio" name="answer3" value="d">Alice Longbottom<br>
+
+	  <b><p> Q4 What was Severus Snape's patronus ?</p></b>
+	 
+	 	<input type="radio" name="answer4" required value="a">Rat<br>
+	 	<input type="radio" name="answer4" value="b">Doe<br>
+	 	<input type="radio" name="answer4" value="c">Tiger<br>
+	 	<input type="radio" name="answer4" value="d">Fox<br>	
+
+	<b> <p> Q5 The goblet of fire usually has which color flame</p></b>
+	 
+	 	<input type="radio" name="answer5" required value="a">Green <br>
+	 	<input type="radio" name="answer5" value="b">Blue<br>
+	 	<input type="radio" name="answer5" value="c">Purple<br>
+	 	<input type="radio" name="answer5" value="d">Red<br>
+	 	
+	 <b> <p> Q6 What possession of his father's did harry receive during his first christmas at hogwarts ? </p></b>
+	 
+	 	<input type="radio" name="answer6" required value="a">Wand<br>
+	 	<input type="radio" name="answer6" value="b">Magic Mirror<br>
+	 	<input type="radio" name="answer6" value="c">Photo album<br>
+	 	<input type="radio" name="answer6" value="d">Invisibility cloak<br>
+
+	 <b> <p> Q7 How did harry's aunt and uncle say tha his parents died ?</p></b>
+	 
+	 	<input type="radio" name="answer7" required value="a">Drowned in the sea<br>
+	 	<input type="radio" name="answer7" value="b">In a plane crash<br>
+	 	<input type="radio" name="answer7" value="c">In a fire<br>
+	 	<input type="radio" name="answer7" value="d">In a car crash<br>
+
+	 <b> <p> Q8 What was the true identity of half-blood prince ?</p></b>
+	 
+	 	<input type="radio" name="answer8" required value="a">Severus Snape<br>
+	 	<input type="radio" name="answer8" value="b">Albus Dumbledore<br>
+	 	<input type="radio" name="answer8" value="c">Voldemort<br>
+	 	<input type="radio" name="answer8" value="d">Remus Lupin<br>
+
+	 <b> <p> Q9 What plant did Neville bring to hogwarts in " Order of Phoenix " ?</p></b>
+	 
+	 	<input type="radio" name="answer9" required value="a">Flutterby Bush<br>
+	 	<input type="radio" name="answer9" value="b">Devil's Snare<br>
+	 	<input type="radio" name="answer9" value="c">Mandrake<br>
+	 	<input type="radio" name="answer9" value="d">Mimbulus Mimbletonia<br>
+
+	 <b> <p> Q10 Who is the head of Ravenclaw house ?</p></b>
+	 
+	 	<input type="radio" name="answer10" required value="a">Professor Mcgonagall<br>
+	 	<input type="radio" name="answer10" value="b"> Professor Flitwick<br>
+	 	<input type="radio" name="answer10" value="c"> Professor Snape <br>
+	 	<input type="radio" name="answer10" value="d">Professor Sprout<br>	
+
+<br>
+<br>
+	 	<button id="begin" class = 'click'> submit  </button>
+	 </form>
+
+</body>
+</html>
+
+<style >
+ 
+p{
+  color: yellow ;
+}
+
+</style>

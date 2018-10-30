@@ -1,0 +1,121 @@
+<html>
+<head>
+<title> form  </title>
+    <link href = "style.css" rel = "stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Felipa' rel='stylesheet'>
+</head>
+<br></br>
+<h2><center>"Elegance is the only beauty that never fades"</center></h2>
+<body style = "background : url('img10.jpg') ">
+<audio autoplay="true" loop="true" volume="5">
+    <source src="song2.mp3" type="audio/mpeg">
+</audio>
+
+  <center>
+<br>
+<form class = 'line ' name = "details" action = "index1.php" method  = "POST"> 
+	<h1> ENTER YOUR DETAILS</h1>
+	
+
+<table cellspacing="20">
+<tr>
+<td >Name</td>
+<td><input type = "text" x-webkit-speech placeholder = "name" name = "name" required></td>
+</tr>
+<tr>
+<td>Mobile no </td>
+<td ><input  type = "number"   placeholder = "mobile_no" name = "mobile_no" required min="1000000000" max="9999999999"></td>
+</tr>
+<tr>
+<td>Email id</td>
+<td><input type = "Email" placeholder = "email_id" name = "email_id" required ></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type = "password" placeholder = "password" name = "pass_word" required></td>
+</tr>
+<br>
+<tr>
+<td><input type="checkbox" id="remember_me" name="_remember_me" checked />
+    <label for="remember_me">remember me</label></td>
+</tr>
+<br>
+<tr>
+<td>    </td>
+<td><button class = 'click'> submit  </button></td></tr>
+<td>      </td>
+<td><input class = 'click1' type="reset" name="reset"></td></tr>
+</form>
+</center>
+<ul class = "bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</table>
+</body>
+</html>
+<style>
+h1{ 
+    font-family: 'Felipa';
+    text-decoration: underline;
+    color: purple ;
+    text-shadow: 2px 2px 20px orange
+     ;
+}
+h2{
+font-weight: bold;
+    color : green ;
+     text-shadow: 2px 2px 10px orange
+}
+.click{
+                background-color: turquoise;
+                 border-style: solid;
+                 border-color : teal;
+                 border-width: 3px;
+                 font-weight: bold;
+                 border-radius: 20px;
+
+
+            }
+ .line{
+ 	             border-style: dashed;
+                 border-color : olive ;
+                 margin-left:150px; 
+                 margin-right: 450px;
+                 margin-top:40px;
+                 margin-bottom: 450px;
+                 border-width: 7px;
+                 border-radius: 15px
+
+                 
+             }
+  
+.click1{
+                 background-color: lightgreen;
+                 border-style: solid;
+                 border-color : teal;
+                 border-width: 3px;
+                 font-weight: bold;
+                 border-radius: 20px;
+}
+
+
+ td{  color: black;
+       font-weight: bold ; }
+
+::placeholder {
+     color:grey;
+     background-color:lightyellow;
+     opacity: 0.50;
+
+
+}
+            </style>

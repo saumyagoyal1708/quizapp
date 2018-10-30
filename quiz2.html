@@ -1,0 +1,134 @@
+
+<html>
+<body style = "background : url('img13.jpg') ">
+
+	 <h3 style="float: center ;"> Time Left = 
+    <span id="timer">
+      <script type="text/javascript">
+        var timeoutHandle;
+        function countdown(minutes)
+         {
+          var seconds = 60;
+          var mins = minutes;
+          function tick()
+           {
+             var counter = document.getElementById("timer");
+             var current_minutes = mins-1;
+             seconds--;
+             counter.innerHTML = current_minutes.toString() + ":" + (seconds<10 ? "0" : "") + String(seconds);
+
+             if (seconds>0)
+              {
+                timeoutHandle = setTimeout( tick , 1000);
+              }
+              else 
+              {
+                if (mins > 1) 
+                {
+                  setTimeout(function(){ countdown(mins-1);},1000);
+                }
+              }
+          }
+          tick();
+
+        }
+        setTimeout(function()
+        {
+          document.getElementById("begin").click()
+        },120000);
+        countdown(2);
+    
+      
+      </script>
+    </span>
+
+</h3>
+<audio autoplay="true" loop="true" volume="5">
+    <source src="song3.mp3" type="audio/mpeg">
+</audio>
+	  <form action = "quiz2.php" method="POST"> 
+	<b> <p> Q1 China reversed its 1959 ban on what sport in 1986 after a visit from Muhammad ali ?</p></b>
+	 
+	 	<input type="radio" name="answer1" required value="a">Soccer<br>
+	 	<input type="radio" name="answer1" value="b">Rugby<br>
+	 	<input type="radio" name="answer1" value="c">Archery<br>
+	 	<input type="radio" name="answer1" value="d">Boxing<br>
+
+     <b><p> Q2 David Beckham played for which famous spanish club ?</p></b>
+	 
+	 	<input type="radio" name="answer2" required value="a">Deportivo La Coruna<br>
+	 	<input type="radio" name="answer2" value="b">Valencia<br>
+	 	<input type="radio" name="answer2" value="c">Barcelona<br>
+	 	<input type="radio" name="answer2" value="d">Real Madrid<br>
+
+	 <b><p> Q3 Dennis Rodman was a famous name in which sport ?</p></b>
+	 
+	 	<input type="radio" name="answer3" required value="a">Basketball<br>
+	 	<input type="radio" name="answer3" value="b">American Football<br>
+	 	<input type="radio" name="answer3" value="c">Ice Hockey<br>
+	 	<input type="radio" name="answer3" value="d">Baseball<br>
+
+	  <b><p> Q4 What city's marathon is held in april, around patriot's day ?</p></b>
+	 
+	 	<input type="radio" name="answer4" required value="a">London<br>
+	 	<input type="radio" name="answer4" value="b">Boston<br>
+	 	<input type="radio" name="answer4" value="c">New York City<br>
+	 	<input type="radio" name="answer4" value="d">Philadelphia<br>	
+
+	<b> <p> Q5 In tennis , what name is given to winning the four major tournaments in a season ?</p></b>
+	 
+	 	<input type="radio" name="answer5" required value="a">Major Slam<br>
+	 	<input type="radio" name="answer5" value="b">Grand Slam<br>
+	 	<input type="radio" name="answer5" value="c">Outright<br>
+	 	<input type="radio" name="answer5" value="d">World Champion<br>
+	 	
+	 <b> <p> Q6 The miami dolphins compete in which sport ?</p></b>
+	 
+	 	<input type="radio" name="answer6" required value="a">Basketball<br>
+	 	<input type="radio" name="answer6" value="b">American Football<br>
+	 	<input type="radio" name="answer6" value="c">Baseball<br>
+	 	<input type="radio" name="answer6" value="d">Ice Hockey<br>
+
+	 <b> <p> Q7 What sport do the Detroit Lions play professionally ?</p></b>
+	 
+	 	<input type="radio" name="answer7" required value="a">Ice Hockey<br>
+	 	<input type="radio" name="answer7" value="b">Baseball<br>
+	 	<input type="radio" name="answer7" value="c">American Football<br>
+	 	<input type="radio" name="answer7" value="d">Basketball<br>
+
+	 <b> <p> Q8 What US state has opted for surfing as its official individual sport and outrigger canoeing as its official team sport ?</p></b>
+	 
+	 	<input type="radio" name="answer8" required value="a">Hawaii<br>
+	 	<input type="radio" name="answer8" value="b">Texas<br>
+	 	<input type="radio" name="answer8" value="c">Florida<br>
+	 	<input type="radio" name="answer8" value="d">California<br>
+
+	 <b> <p> Q9 Which american city is home to the Broncos football team ?</p></b>
+	 
+	 	<input type="radio" name="answer9" required value="a">Denver<br>
+	 	<input type="radio" name="answer9" value="b">Washington<br>
+	 	<input type="radio" name="answer9" value="c">Buffalo<br>
+	 	<input type="radio" name="answer9" value="d">Pittsburg<br>
+
+	 <b> <p> Q10  How many members are there in an athletics relay team </p></b>
+	 
+	 	<input type="radio" name="answer10" required value="a">4<br>
+	 	<input type="radio" name="answer10" value="b">5<br>
+	 	<input type="radio" name="answer10" value="c">2<br>
+	 	<input type="radio" name="answer10" value="d">3<br>	
+
+<br>
+<br>
+	 	<button id="begin" class = 'click'> submit  </button>
+	 </form>
+
+</body>
+</html>
+
+<style >
+ 
+p{
+  color: yellow ;
+}
+
+</style>

@@ -1,0 +1,29 @@
+<?php
+
+$name =      $_POST['name']; 
+$pass_word = $_POST['pass_word']; 
+$mobile_no = $_POST['mobile_no']; 
+
+
+$con = mysql_connect("local host","root","");
+if(!$con)
+{
+die('could not connect :'.mysql_error());
+}
+
+
+mysql_select_db("sg",$con);
+
+$query="INSERT INTO s1 (name ,pass_word,mobile_no)VALUES('$')
+
+
+if(!mysql_query($query,$con))
+{
+die('error in inserting records' .mysql_error);
+}
+else
+{
+echo  data inserted;
+}
+
+?>

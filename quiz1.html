@@ -1,0 +1,135 @@
+
+
+<html>
+<body style = "background : url('img13.jpg') ">
+
+
+  <h3 style="float: center ;"> Time Left = 
+    <span id="timer">
+      <script type="text/javascript">
+        var timeoutHandle;
+        function countdown(minutes)
+         {
+          var seconds = 60;
+          var mins = minutes;
+          function tick()
+           {
+             var counter = document.getElementById("timer");
+             var current_minutes = mins-1;
+             seconds--;
+             counter.innerHTML = current_minutes.toString() + ":" + (seconds<10 ? "0" : "") + String(seconds);
+
+             if (seconds>0)
+              {
+                timeoutHandle = setTimeout( tick , 1000);
+              }
+              else 
+              {
+                if (mins > 1) 
+                {
+                  setTimeout(function(){ countdown(mins-1);},1000);
+                }
+              }
+          }
+          tick();
+
+        }
+        setTimeout(function()
+        {
+          document.getElementById("begin").click()
+        },120000);
+        countdown(2);
+    
+      
+      </script>
+    </span>
+
+</h3>
+<audio autoplay="true" loop="true" volume="5">
+    <source src="song3.mp3" type="audio/mpeg">
+</audio>
+      <form action = "quiz1.php" method="POST"> 
+     <b><p> Q 1 This designer was a cabaret singer before launching her fashion career </p></b>
+        <input type="radio" name="answer1" value="a">Madame Gres<br>
+        <input type="radio" name="answer1" value="b">Elsa Schiaparelli<br>
+        <input type="radio" name="answer1" value="c">Madeleine Vionnet<br>
+        <input type="radio" name="answer1" value="d">Coco Chanel<br>
+
+     <b><p> Q2 Mary Quant was known for her influence on which style subculture ?</p></b>
+     
+        <input type="radio" name="answer2"  value="a">Punk<br>
+        <input type="radio" name="answer2" value="b">Beatnik<br>
+        <input type="radio" name="answer2" value="c">Preppy<br>
+        <input type="radio" name="answer2" value="d">Mod<br>
+
+     <b><p> Q3 Which designer, known for using surrealist elements created shoe hat in 1937?</p></b>
+     
+        <input type="radio" name="answer3"  value="a">Madame Gres<br>
+        <input type="radio" name="answer3" value="b">Madeleine Vionne<br>
+        <input type="radio" name="answer3" value="c">Elsa Schiaparelli<br>
+        <input type="radio" name="answer3" value="d">Mainbocher<br>
+
+     <b> <p> Q4 Name of the voluminous sleeves which were popular for a brief time in the 1980s?</p></b>
+     
+        <input type="radio" name="answer4"  value="a">Leg of mutton<br>
+        <input type="radio" name="answer4" value="b">Dolman<br>
+        <input type="radio" name="answer4" value="c">Bell<br>
+        <input type="radio" name="answer4" value="d">Bishop<br>  
+
+    <b> <p> Q5 In menswear , what is a cravat ?</p></b>
+     
+        <input type="radio" name="answer5" value="a">Hat<br>
+        <input type="radio" name="answer5" value="b">Footwear<br>
+        <input type="radio" name="answer5" value="c">Neckwear<br>
+        <input type="radio" name="answer5" value="d">Coat<br>
+        
+     <b> <p> Q6 During the late middle ages , fashionable women wore dresses and adopted postures to imitate the look of what ?</p></b>
+     
+        <input type="radio" name="answer6"  value="a">Pregnancy<br>
+        <input type="radio" name="answer6" value="b">Old age<br>
+        <input type="radio" name="answer6" value="c">Illness<br>
+        <input type="radio" name="answer6" value="d">Masculinity<br>
+
+     <b> <p> Q7 T-shirts and bell-bottoms originated in which branch of the U.S military ?</p></b>
+     
+        <input type="radio" name="answer7"  value="a">Navy<br>
+        <input type="radio" name="answer7" value="b">Army<br>
+        <input type="radio" name="answer7" value="c">Coast Guard<br>
+        <input type="radio" name="answer7" value="d">Air Force<br>
+
+      <b><p> Q8 What silhouette dominated regency fashion ?</p></b>
+     
+        <input type="radio" name="answer8"  value="a">Basque<br>
+        <input type="radio" name="answer8" value="b">Sheath<br>
+        <input type="radio" name="answer8" value="c">Drop Waist<br>
+        <input type="radio" name="answer8" value="d">Empire<br>
+
+     <b> <p> Q9 Which prominent designer in the 1980s was named the " king of cling" due to his body conscious designs ? </p></b>
+     
+        <input type="radio" name="answer9"  value="a">Azzedine Alaia<br>
+        <input type="radio" name="answer9" value="b">Calvin Klein<br>
+        <input type="radio" name="answer9" value="c">Christian Lacroix<br>
+        <input type="radio" name="answer9" value="d">Ralph Lauren<br>
+
+     <b> <p> Q10 Which designer was known as the " Queen of the bias cut"</p></b>
+     
+        <input type="radio" name="answer10"  value="a">Elsa Schiaparelli<br>
+        <input type="radio" name="answer10" value="b">Madeleine Vionnet<br>
+        <input type="radio" name="answer10" value="c">Clare McCardell<br>
+        <input type="radio" name="answer10" value="d">Coco Chanel<br> 
+
+<br>
+<br>
+        <button id="begin" class = 'click'> submit  </button>
+        
+     </form>
+
+</body>
+</html>
+<style >
+ 
+p{
+  color: yellow ;
+}
+
+</style>
